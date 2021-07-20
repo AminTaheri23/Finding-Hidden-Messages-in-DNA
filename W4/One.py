@@ -46,7 +46,7 @@ def Motifs(profile, Dna):
     """given a profile and an dna list, outputs the k-mers that are most probable with the profile in that dna
 
     Args:
-        profile (list): a 2-D list of probabilty of each nucleotide
+        profile (list): a 2-D list of probability of each nucleotide
         Dna (list): list of string (dna)
 
     Returns:
@@ -84,9 +84,9 @@ def RandomizedMotifSearch(Dna, k, t):
         if Score(motif) < Score(BestMotifs):
             BestMotifs = motif[:]
             
-            sorat = len(set(BestMotifs) & set(truth))
-            makh = float(len(set(BestMotifs) | set(truth)))
-            res = (sorat/makh )*100
+            Nominator = len(set(BestMotifs) & set(truth))
+            Denominator = float(len(set(BestMotifs) | set(truth)))
+            res = (Nominator/Denominator )*100
             if res == 100:
                 print("Percent: ",res)
                 print("inner score:", Score(motif))
@@ -151,9 +151,9 @@ ACCATTTTTAGACGCATTTTTTTGAGACCGACAGGAGACATATTCACCCACAGATAGTATACCGGGAATGTTTGTATGAC
         if Score(best) < Score(li):
             li = best[:]
             print("score: ", Score(best))
-            sorat = len(set(li) & set(truth))
-            makh = float(len(set(li) | set(truth)))
-            res = (sorat/makh )*100
+            Nominator = len(set(li) & set(truth))
+            Denominator = float(len(set(li) | set(truth)))
+            res = (Nominator/Denominator)*100
             print("Percent: ",res)
             if res == 100:
                 print ("THIS IS K:",k)

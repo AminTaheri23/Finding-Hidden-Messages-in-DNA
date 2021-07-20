@@ -2,5 +2,30 @@
     "python.analysis.extraPaths": [
         "./W2",
         "./W3"
+    ],
+    "cSpell.ignoreWords": [
+        "aagtacccctcatat",
+        "acctacccctcataa",
+        "acgt",
+        "cataacccctcatat",
+        "cgcccgccctcatat",
+        "cgcgtgccctcatat",
+        "cgctaaatctcatat",
+        "cgctacagatcatat",
+        "cgctaccatgcatat",
+        "cgctaccccaactat",
+        "cgctacccctcagtg",
+        "cgctacccctcggct",
+        "cgctacccctttcat",
+        "cgctaccctatatat",
+        "cgctacgtatcatat",
+        "cgctagaactcatat",
+        "cgctggacctcatat",
+        "cgctggtcctcatat",
+        "cggaccccctcatat",
+        "ctatactcattagat",
+        "ctcataa",
+        "tgctacccctc",
+        "tgctacccctcatgc"
     ]
 }
