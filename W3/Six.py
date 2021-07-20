@@ -1,7 +1,4 @@
 import sys
-
-from numpy.lib.function_base import sort_complex
-
 sys.path.append('W2')
 
 from Five_one import ProfileMostProbableK_mer
@@ -9,7 +6,7 @@ import numpy as np
 from W2_4_1 import hamming_d
 
 def FormTheMatrix (Dna_l):
-    """Generates a profile matrix for given list of dna. The matrix consists of count of each nucleotide in every string. The first element of 2D list is counts of "A" nucleotide then, "C","G","T"
+    """Using Laplace Correction, generates a profile matrix for given list of dna. The matrix consists of count of each nucleotide in every string. The first element of 2D list is counts of "A" nucleotide then, "C","G","T"
 
     Args:
         Dna_l (list): list of dna(s)
