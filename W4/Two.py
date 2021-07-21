@@ -4,42 +4,7 @@ sys.path.append('W4')
 
 from Six import FormTheMatrix
 from random import choices, randint, seed
-
-def Score(Motifs):
-    count = 0
-    L = Consensus(Motifs)
-    for i in Motifs:
-        for chr1, chr2 in zip(i,L):
-            if chr1 != chr2:
-                count += 1
-    return count
-def Consensus(Motifs):
-    # insert your code here
-    k = len(Motifs[0])
-    count = Count(Motifs)
-    consensus = ""
-    for j in range(k):
-        m = 0
-        frequentSymbol = ""
-        for symbol in "ACGT":
-            if count[symbol][j] > m:
-                m = count[symbol][j]
-                frequentSymbol = symbol
-        consensus += frequentSymbol
-    return consensus
-def Count(Motifs):
-    count = {}
-    for i in 'ACGT':
-        count[i] = []
-        for ii in range(len(Motifs[0])):
-            count[i].append(0)
-    for i in range(len(Motifs)):
-        for j in range(len(Motifs[0])):
-            symbol = Motifs[i][j]
-            count[symbol][j] += 1
-    #for symbol in count:
-        ##count[symbol][kk] = count[symbol][kk]/len(Motifs)
-    return count
+from One import Score 
 
 def Profile_Probability_K_mer(Text, k, prof):
     """Given a profile matrix Profile, we calculate the probability of every k-mer in a string Text and return it. 
